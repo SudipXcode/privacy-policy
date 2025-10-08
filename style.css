@@ -1,167 +1,137 @@
-/* ------------------------------
-   Global Styles
------------------------------- */
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --bg: #0f172a;
-  --bg-secondary: #1e293b;
-  --text: #e2e8f0;
-  --text-muted: #94a3b8;
-  --accent: #38bdf8;
-  --accent-light: #7dd3fc;
-  --border: #334155;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  scroll-behavior: smooth;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
 }
 
-/* ------------------------------
-   Container
------------------------------- */
 .container {
   width: 90%;
   max-width: 900px;
-  margin: 2rem auto;
-  padding: 2.5rem 2.5rem;
-   
+  margin: 0 auto;
+  padding: 3rem 0;
 }
 
-/* ------------------------------
-   Header
------------------------------- */
+/* Header */
 header {
-  background: linear-gradient(135deg, #1e293b, #0f172a);
+  background-color: #1e293b;
   text-align: center;
-  padding: 3rem 1rem 2rem;
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-}
-
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  margin-bottom: 1rem;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #334155;
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: var(--accent);
-  font-weight: 700;
+  color: #f8fafc;
 }
 
-header .role {
-  font-size: 1.2rem;
-  color: var(--text-muted);
+header p {
+  color: #94a3b8;
+  margin: 0.5rem 0;
 }
 
 header .contact {
-  margin-top: 0.8rem;
+  color: #cbd5e1;
   font-size: 0.95rem;
-  color: var(--text);
+  margin-top: 0.8rem;
 }
 
-header .contact a {
-  color: var(--accent-light);
-  text-decoration: none;
-}
-
-header .contact a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------------------
-   Section Titles
------------------------------- */
+/* Section Headings */
 section h2 {
-  color: var(--accent);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  color: #f1f5f9;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--accent);
-  display: inline-block;
-  padding-bottom: 0.25rem;
+  border-left: 4px solid #38bdf8;
+  padding-left: 0.5rem;
 }
 
-/* ------------------------------
-   Sections
------------------------------- */
-section {
-  margin-top: 2rem;
-  background: var(--bg-secondary);
-  padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+/* About */
+.about p {
+  color: #cbd5e1;
+  padding: 1rem;
+  background-color: #1e293b;
+  border-radius: 8px;
 }
 
-section:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+/* Skills */
+.skills ul {
+  list-style: none;
+  padding: 1rem;
+  background-color: #1e293b;
+  border-radius: 8px;
 }
 
-ul {
-  list-style: disc;
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
+.skills li {
+  margin: 0.6rem 0;
 }
 
-.job {
-  margin-bottom: 1.5rem;
+/* Experience */
+.experience .job {
+  background-color: #1e293b;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 .job h3 {
-  color: var(--accent-light);
+  color: #f8fafc;
 }
 
 .job .date {
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 0.9rem;
+  margin: 0.3rem 0 0.8rem;
+}
+
+/* Projects */
+.projects ul {
+  list-style: none;
+  background-color: #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.projects li {
+  margin-bottom: 0.8rem;
+}
+
+/* Education */
+.education p {
+  background-color: #1e293b;
+  padding: 1rem;
+  border-radius: 8px;
   margin-bottom: 0.5rem;
 }
 
-/* ------------------------------
-   Footer
------------------------------- */
+/* Footer */
 footer {
   text-align: center;
-  padding: 2rem 0;
-  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  color: #94a3b8;
   font-size: 0.9rem;
-  color: var(--text-muted);
-  background: #0b1120;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #334155;
 }
 
-/* ------------------------------
-   Responsive
------------------------------- */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 600px) {
   header h1 {
     font-size: 2rem;
   }
 
+  section h2 {
+    font-size: 1.4rem;
+  }
+
   .container {
-    padding: 1.5rem 1rem;
-  }
-
-  section {
-    padding: 1.5rem;
-  }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 92%;
+    padding: 2rem 0;
   }
 }
